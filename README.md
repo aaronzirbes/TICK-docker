@@ -8,10 +8,12 @@ To know more about the individual components see [this](https://influxdata.com/)
 
 Start all the images as follows:
 
-    # cd to desired version
-    cd 1.0/
-    # Start all images in the background
-    docker-compose up -d
+    cd latest/               # cd to desired version
+    docker-compose up -d     # Start all images in the background
+
+Or to start in the foreground
+
+    docker-compose up
 
 ### Check that InfluxDB works:
 
