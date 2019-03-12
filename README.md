@@ -4,16 +4,16 @@ Run the complete TICK stack using this [docker-compose](https://docs.docker.com/
 By using docker-compose all four official TICK stack images are started and linked together.
 To know more about the individual components see [this](https://influxdata.com/)
 
+There is also [this community Docker Swarm Compose file](https://gist.github.com/cdelaitre/85949d8b697359a319e30a678e23d8bd) as well.
+
 ## Usage
 
 Start all the images as follows:
 
-    cd latest/               # cd to desired version
-    docker-compose up -d     # Start all images in the background
-
-Or to start in the foreground
-
-    docker-compose up
+    # cd to desired version
+    cd 1.3/
+    # Start all images in the background
+    docker-compose up -d
 
 ### Check that InfluxDB works:
 
@@ -38,16 +38,7 @@ Check that InfluxDB has such a database in addition to the `_internal` database.
 
 ### Check that Chronograf works
 
-Access the Chronograf inteface, [http://localhost:10000](http://localhost:10000)
-
-You will need to add the InfluxDB server.
-Use these settings:
-
-Host: influxdb
-Port: 8086
-
-No auth or SSL.
-
+Access the Chronograf inteface, [http://localhost:8888](http://localhost:8888)
 
 ### Check Kapacitor works
 
